@@ -1,6 +1,7 @@
 ---
 title: eCryptfs-你的下一个加密系统，何必是bitlocker
 mathjax: true
+date: 2024/4/17
 ---
 
 

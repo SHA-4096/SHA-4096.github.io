@@ -1,6 +1,7 @@
 ---
 title: Nginx学习笔记
 mathjax: true
+date: 2024/4/17
 ---
 
 
