@@ -707,14 +707,23 @@ click_heart:
 
 # Mouse click effects: words (鼠標點擊效果: 文字)
 clickShowText:
-  enable: false
+  enable: true
   text:
-    # - I
-    # - LOVE
-    # - YOU
+    - kubernetes
+    - docker
+    - nginx
+    - debian
+    - ubuntu
+    - flannel
+    - wireguard
+    - tailscale
+    - golang
+    - C#
+    - cpp
+    - traefik
   fontSize: 15px
-  random: false
-  mobile: false
+  random: true
+  mobile: true
 
 # Default display mode (網站默認的顯示模式)
 # light (default) / dark
