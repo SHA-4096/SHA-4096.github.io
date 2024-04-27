@@ -1,6 +1,8 @@
 ---
 title: link
 date: 2024-04-28 23:43:40
+type: "about"
+layout: "about"
 ---
 
 # 关于我
