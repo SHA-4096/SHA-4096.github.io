@@ -758,7 +758,7 @@ hr_icon:
 
 # the subtitle on homepage (主頁subtitle)
 subtitle:
-  enable: false
+  enable: true
   # Typewriter Effect (打字效果)
   effect: true
   # Customize typed.js (配置typed.js)
@@ -773,6 +773,14 @@ subtitle:
   source: false
   # 如果關閉打字效果，subtitle 只會顯示 sub 的第一行文字
   sub:
+  - If the fool would persist in his folly he would become wise.
+  - To see a World in a Grain of Sand And a Heaven in a Wild Flower;
+Hold Infinity in the palm of your hand And Eternity in an hour.
+  - I curse my stars in bitter grief and woe, that made my love so high and me, so low.
+  - As the air to a bird or the sea to a fish, so is contempt to the contemptible.
+  - The cut worm forgives the plow.
+  - One thought fills immensity.
+  - He who desires but acts not, breeds pestilence.
 
 # Loading Animation (加載動畫)
 preloader:
