@@ -2,7 +2,7 @@
 ---
 title: HUST CSE 机器人与人工智能安全课程  Q&A
 date: 2024/4/27
-categories: ROS相关
+category: ROS相关
 ---
 # No.1
 ## Q
