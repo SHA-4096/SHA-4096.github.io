@@ -772,7 +772,7 @@ subtitle:
   # subtitle 會先顯示 source , 再顯示 sub 的內容
   source: true
   # 如果關閉打字效果，subtitle 只會顯示 sub 的第一行文字
-  sub:
+  sub: 
     - If the fool would persist in his folly he would become wise.
     - To see a World in a Grain of Sand And a Heaven in a Wild Flower;
 Hold Infinity in the palm of your hand And Eternity in an hour.
