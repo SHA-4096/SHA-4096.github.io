@@ -1,5 +1,5 @@
 ---
-title: link
+title: 友链
 date: 2024-04-28 23:43:40
 type: "link"
 layout: "link"
