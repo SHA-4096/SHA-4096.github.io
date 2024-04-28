@@ -5,7 +5,7 @@ date: 2024/4/17
 tag:
     - AI
     - LoRA
-category: 技术学习
+category: 技术学习与分享
 ---
 
 # 摘要

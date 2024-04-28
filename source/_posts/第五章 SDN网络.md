@@ -2,6 +2,9 @@
 title: 计网-SDN网络
 mathjax: true
 date: 2024/4/17
+tags:
+	- 计网
+category: 课堂笔记
 ---
 
 # 控制平面

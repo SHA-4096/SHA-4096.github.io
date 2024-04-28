@@ -2,6 +2,10 @@
 title: eCryptfs-你的下一个加密系统，何必是bitlocker
 mathjax: true
 date: 2024/4/17
+- tags:
+    - 理论相关
+    - 实用工具
+category: 技术学习与分享
 ---
 
 

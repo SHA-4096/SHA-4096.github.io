@@ -1,7 +1,8 @@
 ---
 title: Nginx学习笔记
 mathjax: true
-date: 2024/4/17
+date: 2023/4/19
+category: 技术学习与分享
 ---
 
 

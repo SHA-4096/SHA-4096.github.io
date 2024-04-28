@@ -1,7 +1,8 @@
 ---
 title: Windows发展简史
 mathjax: true
-date: 2024/4/17
+date: 2023/6/17
+category: 技术学习与分享
 ---
 ## Windows 1.x/2.x/3.0 ——基于DOS的原初时代
 
