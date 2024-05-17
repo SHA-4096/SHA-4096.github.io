@@ -7,7 +7,7 @@ date: 2024/5/17
     - ServiceMesh
     - Istio
     - Dubbo
-category: 技术学习与分享
+- category: 技术学习与分享
 ---
 
 
