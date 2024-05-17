@@ -13,7 +13,7 @@ date: 2024/5/17
 *RPC*是远程过程调用（Remote Procedure Call）的简写。 RPC 的主要功能目标是让构建分布式计算（应用）更容易，在提供强大的远程调用能力时不损失本地调用的语义简洁性。为实现该目标，RPC 框架需提供一种透明调用机制，让使用者不必显式的区分本地调用和远程调用。
 
 ## 从最简单的gRPC聊起
-传统的RPC将接口定义写在业务逻辑里，这导致服务端和客户端之间的协调变得相当麻烦。为此，谷歌将接口的定义部分写到了protobuf IDL(Interface Definition Language) 里，然后通过[代码生成工具]([protocolbuffers/protobuf: Protocol Buffers - Google's data interchange format (github.com)](https://github.com/protocolbuffers/protobuf))生成对应的客户端和服务端代码。然后客户端就可以通过`服务端地址+参数`这一组信息，通过接口函数向服务端发起调用，看起来一切都很好
+传统的RPC将接口定义写在业务逻辑里，这导致服务端和客户端之间的协调变得相当麻烦。为此，谷歌将接口的定义部分写到了protobuf IDL(Interface Definition Language) 里，然后通过[代码生成工具](https://github.com/protocolbuffers/protobuf)生成对应的客户端和服务端代码。然后客户端就可以通过`服务端地址+参数`这一组信息，通过接口函数向服务端发起调用，看起来一切都很好
 ![](https://grpc.io/img/landing-2.svg)
 **但是它真的很好吗**
 
@@ -138,7 +138,7 @@ Envoy通常是一个独立的容器，这个容器和业务逻辑跑在同一个
 
 而Apache Dubbo的解决方案是，直接将Sidecar打包成SDK，嵌入到业务代码的底层，并为业务逻辑提供一系列易于使用的接口。这样一来，通信由SDK部分的代码完成，对于业务逻辑而言，它也不需要关心网络通信是如何实现的。
 *换言之，SDK的接口函数取代了原本业务代码和sidecar通信的地位，而SDK本身就像是一个嵌入到了业务逻辑代码的Sidecar*
-![](attachments/Pasted%20image%2020240517093232.png)
+![](https://cn.dubbo.apache.org/imgs/v3/concepts/architecture-2.png)
 
 dubbo部署后的结构同样分为控制面和数据面。与Istio不同的是，因为dubbo SDK本身是语言相关的，因此其有一套开发框架，来减弱乃至消除这种语言的相关性
 
