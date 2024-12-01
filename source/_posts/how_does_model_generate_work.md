@@ -31,6 +31,8 @@ We focus on how the class GenerationMixin use the `forward` function in this art
 Here's an overview when you call the function `model.generate`
 ![alt text](image.png)
 
+![alt text](image-1.png)
+
 Let's begin with understanding this `input` argument in this `generate` function. Input is an object of a class called `BatchEncoding`, and it contains bunches of tensors like input_ids, attention_mask, etc. But that would be too much to discuss here. Anyway, `generate` extract data from this `input` with a member function called `GenertionMixin._prepare_model_inputs`
 
 ```python
