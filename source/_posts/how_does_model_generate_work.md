@@ -29,9 +29,9 @@ This article is to have an insight into how this `model.generate` works. To unde
 We focus on how the class GenerationMixin use the `forward` function in this article (How this 'forward' function work in LlamaForCausalLM is another topic). In this topic, we only need to know that LlamaForCausalLM.forward takes in some input_ids and other bunches of parameters, and return something called logits to its caller. 
 
 Here's an overview when you call the function `model.generate`
-![alt text](image.png)
+![alt text](attachments/image.png)
 
-![alt text](image-1.png)
+![alt text](attachments/image-1.png)
 
 Let's begin with understanding this `input` argument in this `generate` function. Input is an object of a class called `BatchEncoding`, and it contains bunches of tensors like input_ids, attention_mask, etc. But that would be too much to discuss here. Anyway, `generate` extract data from this `input` with a member function called `GenertionMixin._prepare_model_inputs`
 
