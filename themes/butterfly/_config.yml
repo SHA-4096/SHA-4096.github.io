@@ -51,7 +51,7 @@ avatar:
 disable_top_img: false
 
 # The banner image of home page
-index_img: http://chev.n2ptr.space/images/2024/04/18/8abdd0f8e85ebad49edba14371c02645.jpeg
+index_img: /img/rachel-seeger-almother-promo.jpg
 
 # If the banner of page not setting, it will show the top_img
 default_top_img:
