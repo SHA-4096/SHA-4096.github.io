@@ -43,7 +43,7 @@ inputs_tensor, model_input_name, model_kwargs = self._prepare_model_inputs(
 
 )
 ```
-After *defining other model kwargs*, we can generate input_ids, which will be passed to the `forward` runction of Llama. 
+After *defining other model kwargs*, we can generate input_ids, which will be passed to the `forward` function of Llama. 
 
 ```python
 # 5. Prepare `input_ids` which will be used for auto-regressive generation
@@ -240,7 +240,7 @@ if do_sample:
 	next_token_scores = logits_warper(input_ids, next_token_scores)
 ```
 
-How does it work? I don't have time to see thar yet, but we know that after this process, we get a score for each token(not just bare probabilities as logits is), then we can do the token selecton
+How does it work? I don't have time to see that yet, but we know that after this process, we get a score for each token(not just bare probabilities as logits is), then we can do the token selecton
 
 ```python
 # token selection
