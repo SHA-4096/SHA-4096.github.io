@@ -37,7 +37,7 @@ category: 技术学习与分享
 `Nacos /nɑ:kəʊs/` 是 Dynamic Naming and Configuration Service的首字母简称，一个更易于构建云原生应用的动态服务发现、配置管理和服务管理平台。
 
 Nacos 提供了一组简单易用的特性集，以快速实现动态服务发现、服务配置、服务元数据及流量管理。
-![](https://cdn.nlark.com/yuque/0/2019/jpeg/338441/1561217892717-1418fb9b-7faa-4324-87b9-f1740329f564.jpeg)
+![alt text](attachments/nacos.png)
 图中各个实体都是通过网络通信的，核心机制由`Nacos Server`实现。 `Provider APP`向`Nacos Server`提出`服务注册`的请求， 然后通过服务发现， `Consumer APP`可以从`Nacos Server`服务的信息。此时，从`Consumer APP`的视角来看，它只需要记住`Nacos Server`的地址，就可以实现微服务信息的获取和调用，比起为每个`Provider APP`单独维护地址，简直方便了太多
 
 *下面通过例子直观感受一下how it works*
