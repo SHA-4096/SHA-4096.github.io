@@ -5,6 +5,24 @@ type: "about"
 layout: "about"
 ---
 
-# 关于我
-HUST中一名平平无奇的学生，主要兴趣在后端开发、分布式系统、边缘计算、物联网等，这个博客大概率会写得十分杂乱，无论是课程笔记还是技术分享，又或者是一些平时自己的所思所想，都有可能扔上这个博客，如果您能够在这个小小的站点有所收获，那我十分荣幸!
+你好！欢迎你来到我的小破站！
 
+目前华中科技大学网安在读，大三，懂一点后端，目前在做LLM Accerlation方面相关的研究
+
+## 喜欢的游戏
+- Monster Hunter P3G/World/Rise/Wilds
+- Ori And the Will of the Wisps/Ori and the Blind Forest
+- Golden Treasure: The Great Green
+- Terraria
+- Detroit: Become Human
+- ADOFAI
+- ...
+
+## 兴趣爱好
+### 骑车
+![alt text](87f9b6c62f57ea69e886585198eaade.jpg)
+
+### 音乐
+几乎什么都听，因为打音游所以对各种曲风的接受度都很高  
+沉迷于各种游戏（尤其是怪猎和Ori）的OST中  
+![alt text](4c1e538da1cecd52b175f0e46176c59.jpg)
