@@ -18,12 +18,15 @@ pip install torch
 
 使用transformers最简单的方法就是通过pipeline类。基本上，transformers将大模型的任务分成了几类，你只需要在初始化pipeline的时候告诉它你要执行什么任务，它就会帮你初始化默认的模型和分词器，然后只要把输入通过参数传递给pipeline实例就可以得到推理结果了。比如下面的代码就是用pipeline调用一个文本分类模型的实例
 
->>>from transformers import pipeline
+```python
+from transformers import pipeline
 
->>> classifier = pipeline("sentiment-analysis")
+classifier = pipeline("sentiment-analysis")
 
->>> classifier("We are very happy to show you the 🤗 Transformers library.")
-[{'label': 'POSITIVE', 'score': 0.9998}]
+print(classifier("We are very happy to show you the 🤗 Transformers library."))
+
+#[{'label': 'POSITIVE', 'score': 0.9998}]
+```
 
 pipeline支持的任务如下表：
 暂时无法在飞书文档外展示此内容
