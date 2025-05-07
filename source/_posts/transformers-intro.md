@@ -9,12 +9,15 @@ category: 技术学习与分享
 
 transformers是一个巨大无比的仓库，大量主流的开源模型都在transformers上有代码实现。而且，像vllm这样的推理框架，也是基于transformers开发的。简单来说，通过transformers，你可以（相对）轻松地调用各种开源模型进行推理，或者训练/微调出适合自己的模型。更重要的是，transformers完全开源，并且有着相对清晰的项目结构，不管是作为学习大模型的材料还是新的模型开发的框架都非常合适。
 
-使用pipeline进行推理
+# 使用pipeline进行推理
 
 首先要进行环境配置
+
+```
 pip install transformers datasets evaluate accelerate
 
 pip install torch
+```
 
 使用transformers最简单的方法就是通过pipeline类。基本上，transformers将大模型的任务分成了几类，你只需要在初始化pipeline的时候告诉它你要执行什么任务，它就会帮你初始化默认的模型和分词器，然后只要把输入通过参数传递给pipeline实例就可以得到推理结果了。比如下面的代码就是用pipeline调用一个文本分类模型的实例
 
@@ -34,9 +37,11 @@ pipeline支持的任务如下表：
 这个时候我们不难发现，pipieline是一个类似interface的东西，按照不同的任务提供了不同的“接口”。那自然地，我们大部分时候会想要指定某个任务所使用的具体的模型，通过给pipeline传递model参数可以实现这一点。
 
 # Use a pipeline as a high-level helper
+```
 from transformers import pipeline
 
 pipe = pipeline("text-generation", model="meta-llama/Llama-3.2-3B")
+```
 
 用更底层的方法进行推理
 
@@ -50,6 +55,7 @@ pipeline只是transformers基本的推理功能的一个高层封装，如果想
 - 获得模型的输出，并decode(tokenizer.decode)
 
 具体地，如果我们想要用llama来进行对话任务，我们可以这样做：
+```python
 from transformers import AutoTokenizer, AutoModelForCausalLM
 
 path="meta-llama/Llama-3.1-8B-Instruct"
@@ -80,10 +86,12 @@ context_length = input.input_ids.shape[-1]
 sequence = output['sequences'][0][context_length:]
 pred = tokenizer.decode(sequence, skip_special_tokens=True)
 print(pred)
+```
 
-微调
+# 微调
 使用 🤗 Transformers 的 Trainer 可以微调预训练模型。以bert模型的微调为例：
 
+```python
 from datasets import load_dataset
 
 # 首先加载数据集
@@ -136,6 +144,7 @@ trainer = Trainer(
 )
 
 trainer.train()
+```
 理解Special Tokens
 你可能会有些好奇，apply_chat_template对我们的输入做了什么修改。实际上，主要的修改体现在special token的添加上
 
@@ -143,6 +152,7 @@ trainer.train()
 
 ![alt text](attachments/special-tokens.png)
 而我们上面的对话，在加了special tokens之后的文本看起来是这样的：
+```
 <|begin_of_text|><|start_header_id|>system<|end_header_id|>
 
 You are a bot that responds to questions.
@@ -151,6 +161,8 @@ You are a bot that responds to questions.
 
 Hey, how many 'r's are there in the word 'strawberry'?<|eot_id|>
 <|start_header_id|>assistant<|end_header_id|>
+```
+
 为什么要加上special token呢？
 
 我们以上面例子中出现的special tokens为例子解释。我们首先要明确一点，transformers架构的大模型的工作方式，是根据已有文本，补全下一个最有可能出现的文本。也就是说，如果向模型输入1+1=，那么下一个最有可能的文本就是2。对于问答任务来说，我们并不希望模型“补全”我们的问题，而是希望模型能对我们的问题做出回答，这个时候，我们就要在训练过程中区分开属于不同角色的文本，<|start_header_id|>和<|end_header_id|>就起到了这样的作用。这样训练之后，模型就知道了，在<|start_header_id|>assistant<|end_header_id|>这一行的后面，需要补全的是模型的回答，而不是用户提出的问题的延续。
@@ -162,6 +174,7 @@ transformers的代码结构，大致就是从GenerationMixin类开始，一层�
 ![alt text](attachments/image-2.png)
 ![alt text](attachments/image-3.png)
 如果我们想要对底层的一些代码进行修改的话，一种方法是使用python的一个叫做monkeypatch的语言特性。具体地，我们可以通过下面的方法，使得forward函数被调用时，跳转到我们自定义的forward函数：
+```
 import transformers
 
 def my_prepare_inputs_for_generation_llama(
@@ -181,8 +194,8 @@ def replace_llama():
     transformers.models.llama.modeling_llama.LlamaFlashAttention2.forward = my_flash_attn_forward_llama
     
 replace_llama()
-
-参考
+```
+# 参考
 https://huggingface.co/docs/transformers/main/zh/index
 https://huggingface.co/docs/transformers/main/zh/quicktour
 https://huggingface.co/docs/transformers/main/zh/training
