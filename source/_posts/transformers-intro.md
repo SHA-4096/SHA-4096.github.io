@@ -189,4 +189,4 @@ https://huggingface.co/docs/transformers/main/zh/training
 https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct
 https://github.com/huggingface/transformers
 https://www.llama.com/docs/model-cards-and-prompt-formats/llama3_1/
-https://www.n2ptr.space/2025/03/18/how_does_model_generate_work/
+https://www.n2ptr.space/how_does_model_generate_work/
