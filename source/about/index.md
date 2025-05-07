@@ -20,9 +20,9 @@ layout: "about"
 
 ## 兴趣爱好
 ### 骑车
-![alt text](87f9b6c62f57ea69e886585198eaade.jpg)
+![alt text](attachments/87f9b6c62f57ea69e886585198eaade.jpg)
 
 ### 音乐
 几乎什么都听，因为打音游所以对各种曲风的接受度都很高  
 沉迷于各种游戏（尤其是怪猎和Ori）的OST中  
-![alt text](4c1e538da1cecd52b175f0e46176c59.jpg)
+![alt text](attachments/4c1e538da1cecd52b175f0e46176c59.jpg)
