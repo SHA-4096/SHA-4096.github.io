@@ -17,4 +17,7 @@ category: 技术学习与分享
 看到系统解释器里那一行`Unknown Option`之后，我意识到Pycharm配置远程编译器的时候大概率执行了类似`tcsh -l`这样的命令（`zsh`是有`-l`参数的），最终导致输出不符合预期而报错
 ![tcsh报错](attachments/pycharm-dev-1.png)
 
+用23版的Pycharm可以看到连接时的日志，也确实如此：
+![alt text](attachments/pycharm-dev-2.png)
+
 目前还在找解决办法……
